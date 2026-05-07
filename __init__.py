@@ -1,15 +1,13 @@
-"""Neural state-space model package for stimulus-evoked activation discovery."""
+"""NPI+GNFC package."""
 
-from .data import NpzSequenceDataset, SyntheticStimActivationDataset
-from .models import NeuralStateSpaceModel
-from .utils import compute_activation_scores, load_checkpoint, save_checkpoint, seed_everything
+from .model import NPIGNFCModel
+from .encoder import GeometricNeuralFieldEncoder
+from .diffusion import ConditionalDiffusionDecoder
+from .maml import FirstOrderMetaAdapter
 
 __all__ = [
-    "NpzSequenceDataset",
-    "SyntheticStimActivationDataset",
-    "NeuralStateSpaceModel",
-    "compute_activation_scores",
-    "load_checkpoint",
-    "save_checkpoint",
-    "seed_everything",
+    "NPIGNFCModel",
+    "GeometricNeuralFieldEncoder",
+    "ConditionalDiffusionDecoder",
+    "FirstOrderMetaAdapter",
 ]
